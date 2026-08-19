@@ -38,5 +38,13 @@ class StudentController extends Controller {
 
 		$this->call->view('student_profile', ['student' => $student]);
 	}
+
+	public function back() {
+		if (session_status() === PHP_SESSION_NONE) {
+			session_start();
+		}
+		$_SESSION['student_access'] = true;
+		redirect('student', false, true);
+	}
 }
 ?>

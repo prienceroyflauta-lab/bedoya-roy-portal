@@ -65,6 +65,16 @@
             font-weight: 700;
             color: #7c2d12;
         }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            background: #7c2d12;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
@@ -106,6 +116,8 @@
                         <?php endforeach; ?>
                     </span>
                 </div>
+
+                <a class="back-btn" href="<?= site_url('student/back'); ?>">Back</a>
             </div>
         </div>
     </div>
