@@ -218,6 +218,12 @@ $config['language'] 				= 'en-US';
 */
 $config['subclass_prefix']          = 'MY_';
 
+require_once APP_DIR . 'middlewares/StudentMiddleware.php';
+
+$config['middlewares'] = [
+    'student_access' => new StudentMiddleware()
+];
+
 /*
 |--------------------------------------------------------------------------
 | Session
